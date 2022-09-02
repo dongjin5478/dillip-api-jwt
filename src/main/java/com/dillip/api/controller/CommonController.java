@@ -45,7 +45,7 @@ public class CommonController {
 		HttpHeaders httpHeaders = new HttpHeaders();
 		String message = null;
 		RandomQuoteDTO response = null;
-		LOGGER.log(Level.INFO, "############# Hitting getRandomQuote() in Controller Layer ###############");
+		LOGGER.log(Level.INFO, "############# Hitting /quote API in Controller Layer ###############");
 		try {
 			response = commonService.getRandomQuote();
 			if(response != null)
