@@ -94,5 +94,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>dillipapi</finalName>
 	</build>
 </project>
