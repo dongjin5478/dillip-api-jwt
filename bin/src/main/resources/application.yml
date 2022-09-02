@@ -1,23 +1,4 @@
-#spring:
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/postgres
-# 
-#    username: postgres
-#    password: root
-#    
-#  jpa:
-#    hibernate:
-#      ddl-auto: update
-#    show-sql: true
-
 spring:
-  datasource:
-    url: jdbc:postgresql://ec2-35-173-207-244.compute-1.amazonaws.com:5432/d15t3bp3knc27r
- 
-    username: nszxjptbnhecfr
-    password: fb7ef8fba8aa28ba0438e5d1e1c5bd9d6821a5e847912e8b4bbfbc8ae1d0b3e2
-    
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+  profiles:
+    active:
+    - dev

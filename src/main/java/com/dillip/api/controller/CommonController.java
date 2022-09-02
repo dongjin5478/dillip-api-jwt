@@ -36,6 +36,36 @@ public class CommonController {
 	@Autowired
 	private CommonService commonService;
 	
+	@Operation(summary = "getHelloMessage")
+	@GetMapping(path = "/hello/{name}")
+	public ResponseEntity<ApiResponseObject> getHelloMessage(@PathVariable(name = "name") String name)
+	{	
+		
+		HttpStatus status = null;
+		HttpHeaders httpHeaders = new HttpHeaders();
+		String message = null;
+		String response = null;
+		LOGGER.log(Level.INFO, "############# Hitting /hello API in Controller Layer ###############");
+		try {
+			response = commonService.getHelloMessage(name);
+			if(response != null)
+			{
+				message = ProjectConstant.DATA_FOUND;
+				status = HttpStatus.OK;
+			}
+			else
+			{
+				message = ProjectConstant.DATA_NOT_FOUND;
+				status = HttpStatus.NOT_FOUND;
+			}
+		} catch (Exception e) {
+			LOGGER.log(Level.INFO, "############# Exception Occured in /hello API in Controller Layer ##########"+e);
+			message = e.getMessage();
+			status = HttpStatus.INTERNAL_SERVER_ERROR;
+		}
+		return new ResponseEntity<>(new ApiEntity<>(message, response), httpHeaders, status);
+	}
+	
 	@Operation(summary = "getRandomQuote")
 	@GetMapping(path = "/quote")
 	public ResponseEntity<ApiResponseObject> getRandomQuote()

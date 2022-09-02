@@ -177,4 +177,9 @@ public class CommonServiceImpl implements CommonService {
 		}
 		return body;
 	}
+
+	@Override
+	public String getHelloMessage(String name) {
+		return "Hello "+name+" . ! Welcome to DILLIPFOLIO";
+	}
 }

@@ -11,4 +11,5 @@ public interface CommonService {
 	List<PostOfficeDetailsResponse> getPostOfficeDetailsByPinCode(String pinCode);
 	List<PostOfficeDetailsResponse> getPostOfficeDetailsByBranchName(String branchName);
 	BankDetailsResponse getBankDetailsByIfsc(String ifscCode);
+	String getHelloMessage(String name);
 }
