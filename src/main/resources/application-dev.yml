@@ -1,0 +1,47 @@
+#Local Dev Environment Configuration
+
+#Local Database Configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+ 
+    username: postgres
+    password: root
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+      format_sql: true
+    show-sql: true
+
+#Mail Sender Configuration
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: dongjinmaster9@gmail.com
+    password: hbhgtagbwdpcbaxe
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            
+#Constant Properties
+jwt:
+  secret: dixxysllss
+            
+#External URL configuration
+
+randomquote:
+  url: https://api.quotable.io/random
+  
+pincode:
+  url: https://api.postalpincode.in/
+  
+bankdetails:
+  url: https://ifsc.razorpay.com/
+  
+universitydetails:
+  url: http://universities.hipolabs.com/search
