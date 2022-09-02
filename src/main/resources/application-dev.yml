@@ -1,6 +1,8 @@
 #Local Dev Environment Configuration
 
 #Local Database Configuration
+server:  port: 9090
+
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
