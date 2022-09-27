@@ -12,7 +12,6 @@
 	<groupId>com.student</groupId>
 	<artifactId>DillipAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 	<name>DillipAPI</name>
 	<description>All API Developed By Dillip</description>
 	<properties>
