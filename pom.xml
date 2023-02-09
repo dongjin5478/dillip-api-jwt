@@ -14,6 +14,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>DillipAPI</name>
 	<description>All API Developed By Dillip</description>
+	<packaging>war</packaging>
 	<properties>
 		<java.version>8</java.version>
 	</properties>
